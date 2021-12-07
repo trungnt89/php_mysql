@@ -21,3 +21,11 @@ docker rm -vf $(docker ps -aq);
 docker rmi -f $(docker images -aq);
 docker volume rm $(docker volume ls -q);
 docker-compose up --build
+
+
+Khoi tao container ben trong docker theo port setting
+    docker run -dp 8003:80 php_mysql_main_app
+
+
+Vao trong container :
+    docker exec -it 3b9de808e37c bash 
